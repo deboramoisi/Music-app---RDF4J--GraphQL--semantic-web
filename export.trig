@@ -1,0 +1,217 @@
+@prefix schema: <http://schema.org/> .
+@prefix pumo: <http://pusteamoisi.com#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+
+pumo:MusicGraph {
+  pumo:PUMO_Music a pumo:Magazin;
+    rdfs:label "PU&MO Music";
+    pumo:detine _:node1f5lrp3l9x1 .
+  
+  _:node1f5lrp3l9x1 a pumo:InstrumentMuzical;
+    pumo:categorii 5 .
+  
+  pumo:InstrumentMuzical rdfs:label "Instrument Muzical" .
+  
+  pumo:InstrumentPercutie rdfs:label "Instrument de Percutie";
+    rdfs:subClassOf pumo:InstrumentMuzical .
+  
+  pumo:InstrumentSuflat rdfs:label "Instrument de Suflat";
+    rdfs:subClassOf pumo:InstrumentMuzical .
+  
+  pumo:InstrumentCoarde rdfs:label "Instrument cu Coarde";
+    rdfs:subClassOf pumo:InstrumentMuzical .
+  
+  pumo:InstrumentClaviatura rdfs:label "Instrument cu Claviatura";
+    rdfs:subClassOf pumo:InstrumentMuzical .
+  
+  pumo:InstrumentArcus rdfs:label "Instrument cu Arcus";
+    rdfs:subClassOf pumo:InstrumentMuzical .
+  
+  pumo:Online rdfs:label "Online" .
+  
+  pumo:Fizic rdfs:label "Magazin Fizic" .
+  
+  pumo:OnlineFizic rdfs:label "Online si in Magazin Fizic" .
+  
+  pumo:tobaMillenium a pumo:InstrumentPercutie;
+    rdfs:label "Toba Millenium MX222BX";
+    pumo:pret 1179;
+    pumo:hasImage _:node1f5lrp3l9x2;
+    pumo:disponibilitatePeStoc _:node1f5lrp3l9x3 .
+  
+  _:node1f5lrp3l9x2 a schema:image;
+    pumo:hasLabel "../img/set-de-tobe-acustice-millenium-hybrid-practice-rl.jpg" .
+  
+  _:node1f5lrp3l9x3 pumo:disponibil true;
+    pumo:locatie pumo:Online;
+    pumo:bucatiStoc 3 .
+  
+  pumo:tobaCajon a pumo:InstrumentPercutie;
+    rdfs:label "Toba Millenium CA1 Cajon";
+    pumo:pret 370;
+    pumo:hasImage _:node1f5lrp3l9x4;
+    pumo:disponibilitatePeStoc _:node1f5lrp3l9x5 .
+  
+  _:node1f5lrp3l9x4 a schema:image;
+    rdfs:label "../img/cajon-gewa-lp819-044.jpg" .
+  
+  _:node1f5lrp3l9x5 pumo:disponibil true;
+    pumo:locatie pumo:OnlineFizic;
+    pumo:bucatiStoc 5 .
+  
+  pumo:flautAzumi a pumo:InstrumentSuflat;
+    rdfs:label "Flaut Azumi AZ-Z2RI";
+    pumo:pret 6669;
+    pumo:hasImage _:node1f5lrp3l9x6;
+    pumo:disponibilitatePeStoc _:node1f5lrp3l9x7 .
+  
+  _:node1f5lrp3l9x6 a schema:image;
+    rdfs:label "../img/flaut-yamaha-yfl-212-sl.jpg" .
+  
+  _:node1f5lrp3l9x7 pumo:disponibil true;
+    pumo:locatie pumo:OnlineFizic;
+    pumo:bucatiStoc 4 .
+  
+  pumo:clarinetCrampon a pumo:InstrumentSuflat;
+    rdfs:label "Clarinet Crampon E11";
+    pumo:pret 5998;
+    pumo:hasImage _:node1f5lrp3l9x8;
+    pumo:disponibilitatePeStoc _:node1f5lrp3l9x9 .
+  
+  _:node1f5lrp3l9x8 a schema:image;
+    rdfs:label "../img/buffet_crampon_-_bb_klarinet_-_e11_silver_plated_-_bc2501-2-0gb-9.jpg" .
+  
+  _:node1f5lrp3l9x9 pumo:disponibil true;
+    pumo:locatie pumo:Online;
+    pumo:bucatiStoc 3 .
+  
+  pumo:chitaraHofner a pumo:InstrumentCoarde;
+    rdfs:label "Chitara Hofner HA-JC07";
+    pumo:pret 1727;
+    pumo:hasImage _:node1f5lrp3l9x10;
+    pumo:disponibilitatePeStoc _:node1f5lrp3l9x11 .
+  
+  _:node1f5lrp3l9x10 a schema:image;
+    rdfs:label "../img/745378509.hofner-hm90.jpg" .
+  
+  _:node1f5lrp3l9x11 pumo:disponibil true;
+    pumo:locatie pumo:OnlineFizic;
+    pumo:bucatiStoc 7 .
+  
+  pumo:pianYamaha a pumo:InstrumentClaviatura;
+    rdfs:label "Pian Yahama P-45";
+    pumo:pret 2070;
+    pumo:hasImage _:node1f5lrp3l9x12;
+    pumo:disponibilitatePeStoc _:node1f5lrp3l9x13;
+    rdfs:member pumo:Clape, pumo:Pedale, pumo:Suport, pumo:Butoane .
+  
+  _:node1f5lrp3l9x12 a schema:image;
+    rdfs:label "../img/552203514.yamaha-arius-ydp-144.jpg" .
+  
+  _:node1f5lrp3l9x13 pumo:disponibil true;
+    pumo:locatie pumo:OnlineFizic;
+    pumo:bucatiStoc 9 .
+  
+  pumo:orgaRoland a pumo:InstrumentClaviatura;
+    rdfs:label "Orga Roland Cloud SRX";
+    pumo:pret 400;
+    pumo:hasImage _:node1f5lrp3l9x14;
+    pumo:disponibilitatePeStoc _:node1f5lrp3l9x15 .
+  
+  _:node1f5lrp3l9x14 a schema:image;
+    rdfs:label "../img/claviatura-cu-ritmuri-roland-bk-5-2175.jpg" .
+  
+  _:node1f5lrp3l9x15 pumo:disponibil false;
+    pumo:bucatiStoc 0 .
+  
+  pumo:vioaraHora a pumo:InstrumentArcus;
+    rdfs:label "Vioara Hora Elite 4/4";
+    pumo:pret 700;
+    pumo:hasImage _:node1f5lrp3l9x16;
+    pumo:disponibilitatePeStoc _:node1f5lrp3l9x17 .
+  
+  _:node1f5lrp3l9x16 a schema:image;
+    rdfs:label "../img/Vioara clasica din lemn Viola, 5 5, husa inclusa-800x800.jpg" .
+  
+  _:node1f5lrp3l9x17 pumo:disponibil true;
+    pumo:locatie pumo:Online;
+    pumo:bucatiStoc 8 .
+  
+  pumo:violoncelSoundSation a pumo:InstrumentArcus;
+    rdfs:label "Violoncel SoundSation VPCE-4";
+    pumo:pret 4700;
+    pumo:hasImage _:node1f5lrp3l9x18;
+    pumo:disponibilitatePeStoc _:node1f5lrp3l9x19 .
+  
+  _:node1f5lrp3l9x18 a schema:image;
+    rdfs:label "../img/Cello_5String_LuisClark_KSPRA18_028-2k.jpg" .
+  
+  _:node1f5lrp3l9x19 pumo:disponibil true;
+    pumo:locatie pumo:Online;
+    pumo:bucatiStoc 10 .
+  
+  pumo:ukuleleKala a pumo:InstrumentCoarde;
+    rdfs:label "Ukulele Kala Mahogany Tenor";
+    pumo:pret 800;
+    pumo:hasImage _:node1f5lrp3l9x20;
+    pumo:disponibilitatePeStoc _:node1f5lrp3l9x21 .
+  
+  _:node1f5lrp3l9x20 rdfs:label "../img/fender-venice-soprano-ukulele-cherry.jpg" .
+  
+  _:node1f5lrp3l9x21 pumo:disponibil true;
+    pumo:locatie pumo:OnlineFizic;
+    pumo:bucatiStoc 8 .
+  
+  pumo:comanda rdfs:domain pumo:Client;
+    rdfs:range pumo:InformatiiComanda .
+  
+  pumo:Client a rdfs:Person;
+    rdfs:label "Client" .
+  
+  pumo:idComanda rdfs:domain pumo:InformatiiComanda;
+    rdfs:range pumo:IdentificatorComanda .
+  
+  pumo:produsComandat rdfs:domain pumo:InformatiiComanda;
+    rdfs:range pumo:InstrumenteComandate .
+  
+  pumo:bucatiComandate rdfs:domain pumo:InformatiiComanda;
+    rdfs:range pumo:BucatiComandate .
+  
+  pumo:PusteaDorita rdfs:label "Pustea Dorita-Daniela";
+    pumo:comanda _:node1f5lrp3l9x22 .
+  
+  _:node1f5lrp3l9x22 pumo:idComanda pumo:PM1;
+    pumo:produsComandat pumo:ukuleleKala;
+    pumo:bucatiComandate 3 .
+  
+  pumo:MoisiDebora rdfs:label "Moisi Olivia-Debora";
+    pumo:comanda _:node1f5lrp3l9x23, _:node1f5lrp3l9x24 .
+  
+  _:node1f5lrp3l9x23 pumo:idComanda pumo:PM2;
+    pumo:produsComandat pumo:flautAzumi;
+    pumo:bucatiComandate 1 .
+  
+  _:node1f5lrp3l9x24 pumo:idComanda pumo:PM3;
+    pumo:produsComandat pumo:vioaraHora;
+    pumo:bucatiComandate 2 .
+}
+
+{
+  _:node1f5lrp3l9x25 pumo:disponibil true;
+    pumo:bucatiStoc 1 .
+  
+  _:node1f5lrp3l9x26 pumo:disponibil true;
+    pumo:bucatiStoc 4 .
+  
+  _:node1f5lrp3l9x27 pumo:disponibil true;
+    pumo:bucatiStoc 1 .
+  
+  _:node1f65413g3x1 pumo:disponibil true;
+    pumo:bucatiStoc 10 .
+}

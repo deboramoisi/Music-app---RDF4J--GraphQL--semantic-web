@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Proiect Web Semantic</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">PU&MO MUSIC</h1>
+            <h2 class="text-center heading-2">Bine ai venit in magazinul nostru! Ne bucuram ca ne-ai ales!</h2>
+        </div>
+            <div class="row">
+                <div class="col-md-3 top-margin-3">
+                    <button class="btn btn-primary category-button" onclick="getCategoriiProduse()">Afiseaza Categorii Instrumente</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- Categorii produse -->
+                    <h3 class="heading-3">Categorii Instrumente</h3>
+                    <ul class="list-group categorii-produse">
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <h3 class="heading-3">Instrumente din categoria selectata</h3>
+                    <!-- Instrumente -->
+                    <div id="instrumente">
+                    </div>
+                </div>
+            </div>
+        <div class="row form-row">
+            <div>
+                <h2 class="text-center top-margin-3 bottom-margin-2">SECTIUNE DE ADAUGARE INSTRUMENT</h2>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <form id="insert-form">
+                    <div class="form-group">
+                        <input type="text" name="denumire" id="denumire" class="form-control" placeholder="Denumire instrument">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="pret" id="pret" class="form-control" placeholder="Pret">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="bucatiPeStoc" id="bucatiPeStoc" class="form-control" placeholder="Bucati pe stoc">
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="disponibil" id="disponibil" /> &nbsp; Disponibil pe stoc
+                    </div>
+                    <div class="form-group">
+                        <select name="disponibilitate" id="disponibilitate" class="form-control">
+                            <option value="online">Disponibil Online</option>
+                            <option value="fizic">Disponibil Magazin Fizic</option>
+                            <option value="onlineFizic">Disponibil Online si in Magazin</option>
+                        </select>
+                    </div>
+                    <div class="center">
+                        <button id="insert-button" class="btn btn-success insert-button">Inserare</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
